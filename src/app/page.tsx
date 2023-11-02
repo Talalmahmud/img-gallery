@@ -123,6 +123,7 @@ const Home: React.FC = () => {
                 layout="fill"
                 alt=""
                 className="group-hover:opacity-50"
+                priority
               />
               {(selectedItems.includes(index) || hoveredItem === index) && (
                 <input
@@ -134,7 +135,30 @@ const Home: React.FC = () => {
               )}
             </div>
           ))}
-          <div className=" bg-red-400"></div>
+          <label className=" bg-slate-200 border-black border-2 border-dotted rounded-[10px] flex justify-center items-center cursor-pointer">
+            <div className=" flex flex-col justify-center items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="100"
+                height="100"
+                viewBox="0 0 24 24"
+                fill="true"
+                className=" h-[24px] w-[24px]"
+              >
+                <path d="M 0 2 L 0 22 L 24 22 L 24 2 Z M 2 4 L 22 4 L 22 20 L 2 20 Z M 17 7 C 15.894531 7 15 7.894531 15 9 C 15 10.105469 15.894531 11 17 11 C 18.105469 11 19 10.105469 19 9 C 19 7.894531 18.105469 7 17 7 Z M 7.875 9.78125 L 4 12.53125 L 4 18 L 20 18 L 20 14.84375 L 15.9375 12.375 L 12.53125 13.90625 Z"></path>
+              </svg>
+              <p>Add Images</p>
+            </div>
+            <input
+              type="file"
+              name=""
+              id=""
+              className="hidden"
+              accept=".jpeg,.jpg,.webp,.png"
+            />
+          </label>
         </div>
       </div>
     </main>
